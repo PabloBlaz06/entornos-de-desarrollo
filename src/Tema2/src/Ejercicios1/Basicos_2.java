@@ -25,5 +25,8 @@ public class Basicos_2 {
         } else {
             System.out.println("El mayor es el tercer numero");
         }
+
+        sc.close();
+
     }
 }

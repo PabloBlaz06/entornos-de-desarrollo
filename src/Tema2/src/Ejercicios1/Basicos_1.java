@@ -12,6 +12,12 @@ public class Basicos_1 {
         System.out.println("Intro duce un numero entero: ");
         int numero = sc.nextInt();
 
+        if (numero == 0) {
+            System.out.println("Es cero");
+        } else if (numero < 0) {
+            System.out.println("es negativo");
+        }
+
         if (numero % 2 == 0) {
             System.out.println(numero + " es par ");
         } else {

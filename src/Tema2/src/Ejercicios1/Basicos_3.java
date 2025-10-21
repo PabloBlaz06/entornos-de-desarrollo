@@ -28,5 +28,8 @@ public class Basicos_3 {
         } else {
             System.out.println(numero + " es el Domingo");
         }
+
+        sc.close();
+
     }
 }

@@ -16,7 +16,7 @@ public class Basicos_19 {
         System.out.println("Numeros impares menores que " + numero);
 
         for (int i = 1; i < numero; i++) {
-            if (i % 2 != 0) {
+            if (i % 2 == 0) {
                 System.out.println(i);
             }
         }
