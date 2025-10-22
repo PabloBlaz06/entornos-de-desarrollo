@@ -10,6 +10,23 @@ public class Avanzados_11 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("");
+        int numeroSecreto = (int)(Math.random() * 100) + 1;
+        int numero = 0;
+
+        System.out.println("Adivina el número (entre 1 y 100):");
+
+        while (numero != numeroSecreto) {
+            numero = sc.nextInt();
+
+            if (numero < numeroSecreto) {
+                System.out.println("El número es mayor.");
+            } else if (numero > numeroSecreto) {
+                System.out.println("El número es menor.");
+            } else {
+                System.out.println("Has acertado, el número era " + numeroSecreto);
+            }
+        }
+
+        sc.close();
     }
 }

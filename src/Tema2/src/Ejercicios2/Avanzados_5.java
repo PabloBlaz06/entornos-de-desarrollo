@@ -3,6 +3,7 @@ package Tema2.src.Ejercicios2;
 import java.util.Scanner;
 
 /*Desarrolla un programa que solicite un número n y luego muestre por pantalla la siguiente figura*/
+
 public class Avanzados_5 {
     public static void main(String[] args) {
 
