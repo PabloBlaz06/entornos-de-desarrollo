@@ -1,35 +1,27 @@
 package Tema2.src.Ejercicios_sin_internet;
 
+/*Crea un metodo para determinar si un número es par o impar*/
+
 import java.util.Scanner;
 
-/*Implementa un metodo que calcule el mayor entre tres numeros */
 public class Ej_5 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce un numero: ");
-        int num1 = sc.nextInt();
-
-        System.out.println("Introduce otro numero: ");
-        int num2 = sc.nextInt();
-
-        System.out.println("Introduce un ultimo numero: ");
-        int num3 = sc.nextInt();
+        System.out.println("Introduce un numero para saber si es par o impar");
+        int numero = sc.nextInt();
 
         sc.close();
 
-        int numeroMayor = mayor(num1, num2, num3);
-
-        System.out.println("El numero mayor es: " + numeroMayor);
+        ParImpar(numero);
     }
 
-    static int mayor(int num1, int num2, int num3) {
-        if (num1 >= num2 && num1 >= num3) {
-            return num1;
-        } else if (num2 >= num1 && num2 >= num3) {
-            return num2;
+    static void ParImpar(int numero) {
+        if (numero % 2 == 0) {
+            System.out.println("El numero " + numero + " es par");
         } else {
-            return num3;
+            System.out.println("El numero " + numero + " es impar");
         }
     }
 }
