@@ -9,6 +9,8 @@ public class Ej_10 {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Introduce cuantos numeros quieres sumar: ");
+        int cantidad = sc.nextInt();
 
     }
 }
