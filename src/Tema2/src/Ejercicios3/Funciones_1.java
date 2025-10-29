@@ -17,9 +17,5 @@ public class Funciones_1 {
 
     }
 
-    static void esPrimo(int numero) {
-        if (numero) {
 
-        }
-    }
 }
