@@ -14,8 +14,24 @@ public class Funciones_1 {
 
         sc.close();
 
-
+        if (esPrimo(numero, 2)) {
+            System.out.println(numero + " es primo.");
+        } else {
+            System.out.println(numero + " no es primo.");
+        }
     }
 
+    static boolean esPrimo(int numero, int divisor){
+
+        if (numero < 2){
+            return false;
+        } else if (divisor * divisor > numero){
+            return true;
+        } else if (numero % divisor == 0){
+            return false;
+        } else{
+            return esPrimo(numero, divisor +1);
+        }
+    }
 
 }
