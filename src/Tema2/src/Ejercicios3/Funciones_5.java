@@ -19,7 +19,7 @@ public class Funciones_5 {
         int resultado = factorial(numero);
 
         if (resultado == -1) {
-            System.out.println("Error: el número es negativo.");
+            System.out.println("El número es negativo");
         } else if (resultado == -2) {
             System.out.println("El número es cero. Retorna -2 según la especificación.");
         } else {
@@ -27,14 +27,14 @@ public class Funciones_5 {
         }
     }
 
-    static int factorial(int numero){
-        if(numero < 0){
+    static int factorial(int numero) {
+        if (numero < 0) {
             return -1;
-        } else if(numero == 0){
+        } else if (numero == 0) {
             return -2;
-        } else if(numero == 1){
+        } else if (numero == 1) {
             return 1;
-        } else{
+        } else {
             return numero * factorial(numero - 1);
         }
     }
