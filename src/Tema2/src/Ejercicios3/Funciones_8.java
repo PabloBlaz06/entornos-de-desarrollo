@@ -2,11 +2,40 @@ package Tema2.src.Ejercicios3;
 
 public class Funciones_8 {
     public static void main(String[] args) {
-        String cadena = "hola";
-        char caracter = cadena.charAt(0);
-        System.out.println(caracter);
-        System.out.println(caracter + 2);
+        String texto = "hola";
 
-        if (carater == 'y') {
+        String cifrado = cifrar(texto);
+        System.out.println("Cifrado: " + cifrado);
+
+        String descifrado = descifrar(cifrado);
+        System.out.println("Descifrado: " + descifrado);
+    }
+
+    static String cifrar(String texto) {
+        String resultado = "";
+        for (int i = 0; i < texto.length(); i++) {
+            char c = texto.charAt(i);
+
+            if (c >= 'a' && c <= 'z') {
+                c = (char) ('a' + (c - 'a' + 2) % 26);
+            }
+
+            resultado += c;
+        }
+        return resultado;
+    }
+
+    static String descifrar(String texto) {
+        String resultado = "";
+        for (int i = 0; i < texto.length(); i++) {
+            char c = texto.charAt(i);
+
+            if (c >= 'a' && c <= 'z') {
+                c = (char) ('a' + (c - 'a' - 2 + 26) % 26);
+            }
+
+            resultado += c;
+        }
+        return resultado;
     }
 }
