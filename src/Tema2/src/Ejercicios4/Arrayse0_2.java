@@ -30,5 +30,6 @@ public class Arrayse0_2 {
 
     private static boolean estaOrdenado(int[] nunmeroAleatorio) {
         boolean ordenado = true;
+        return ordenado;
     }
 }
