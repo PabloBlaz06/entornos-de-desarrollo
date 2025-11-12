@@ -2,40 +2,53 @@ package Tema2.src.Ejercicios3;
 
 public class Funciones_8 {
     public static void main(String[] args) {
-        String texto = "hola";
+        String cadena = "holaz";
+        System.out.println("La cadena es: " + cadena);
 
-        String cifrado = cifrar(texto);
-        System.out.println("Cifrado: " + cifrado);
+        // cifrar
+        String cadenaCifrada = cifrar(cadena);
+        System.out.println("La cadena cifrada sería: " + cadenaCifrada);
+        // descifrar
+        String cadenaDescifrada = descifrar(cadenaCifrada);
+        System.out.println("La cadena descifrada sería: " + cadenaDescifrada);
 
-        String descifrado = descifrar(cifrado);
-        System.out.println("Descifrado: " + descifrado);
     }
 
-    static String cifrar(String texto) {
-        String resultado = "";
-        for (int i = 0; i < texto.length(); i++) {
-            char c = texto.charAt(i);
-
-            if (c >= 'a' && c <= 'z') {
-                c = (char) ('a' + (c - 'a' + 2) % 26);
+    static String cifrar(String cadena) {
+        String cadenaCifrada = "";
+        // Pasamos por todos los caracteres, y los vamos cifrando uno a uno
+        for (int i = 0; i < cadena.length(); i++) {
+            // Ciframos el caracter actual
+            char caracter = cadena.charAt(i);
+            if (caracter != 'y' && caracter != 'z') {
+                char caracterCifrado = (char) (caracter + 2);
+                // Lo metemos en la cadena cifrada
+                cadenaCifrada = cadenaCifrada + caracterCifrado;
+            } else if (caracter == 'y') {
+                cadenaCifrada = cadenaCifrada + 'a';
+            } else if (caracter == 'z') {
+                cadenaCifrada = cadenaCifrada + 'b';
             }
-
-            resultado += c;
         }
-        return resultado;
+        return cadenaCifrada;
     }
 
-    static String descifrar(String texto) {
-        String resultado = "";
-        for (int i = 0; i < texto.length(); i++) {
-            char c = texto.charAt(i);
-
-            if (c >= 'a' && c <= 'z') {
-                c = (char) ('a' + (c - 'a' - 2 + 26) % 26);
+    static String descifrar(String cadena) {
+        String cadenaDescifrada = "";
+        // Pasamos por todos los caracteres, y los vamos cifrando uno a uno
+        for (int i = 0; i < cadena.length(); i++) {
+            // Ciframos el caracter actual
+            char caracter = cadena.charAt(i);
+            if (caracter != 'a' && caracter != 'b') {
+                char caracterDescifrado = (char) (caracter - 2);
+                // Lo metemos en la cadena cifrada
+                cadenaDescifrada = cadenaDescifrada + caracterDescifrado;
+            } else if (caracter == 'a') {
+                cadenaDescifrada = cadenaDescifrada + 'y';
+            } else if (caracter == 'b') {
+                cadenaDescifrada = cadenaDescifrada + 'z';
             }
-
-            resultado += c;
         }
-        return resultado;
+        return cadenaDescifrada;
     }
 }

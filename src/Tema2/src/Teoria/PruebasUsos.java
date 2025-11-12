@@ -32,6 +32,6 @@ public class PruebasUsos {
 
         if (edad <= 18) {
 
-        } else if(edad >=)
+        }
     }
 }
