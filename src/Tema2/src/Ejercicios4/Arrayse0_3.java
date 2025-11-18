@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*Agenda para almacenar nombres y telefonos de personas.
 los nombres en un array y los telefonos en otro.
 la correlacion es en base al indice.*/
-public class Arryse0_3 {
+public class Arrayse0_3 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
