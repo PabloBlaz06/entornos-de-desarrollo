@@ -3,41 +3,41 @@ package Tema2.src.Ejercicios4;
 public class Arrayse1_9 {
     public static void main(String[] args) {
 
-        int[] a = {4,8,15,22,25,40};
-        int[] b = {3,6,18,21,25,47};
+        int[] arr1 = {4,8,15,22,25,40};
+        int[] arr2 = {3,6,18,21,25,47};
 
-        int[] c = new int[a.length + b.length];
+        int[] arrOrdenado = new int[arr1.length + arr2.length];
 
         int i = 0;
         int j = 0;
         int k = 0;
 
-        while (i < a.length && j < b.length) {
-            if (a[i] < b[j]) {
-                c[k] = a[i];
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] < arr2[j]) {
+                arrOrdenado[k] = arr1[i];
                 i++;
             } else {
-                c[k] = b[j];
+                arrOrdenado[k] = arr2[j];
                 j++;
             }
             k++;
         }
 
-        while (i < a.length) {
-            c[k] = a[i];
+        while (i < arr1.length) {
+            arrOrdenado[k] = arr1[i];
             i++;
             k++;
         }
 
-        while (j < b.length) {
-            c[k] = b[j];
+        while (j < arr2.length) {
+            arrOrdenado[k] = arr2[j];
             j++;
             k++;
         }
 
-        System.out.println("Array c ordenado:");
-        for (int x = 0; x < c.length; x++) {
-            System.out.print(c[x] + " ");
+        System.out.println("Array ordenado:");
+        for (int x = 0; x < arrOrdenado.length; x++) {
+            System.out.print(arrOrdenado[x] + " ");
         }
 
 
