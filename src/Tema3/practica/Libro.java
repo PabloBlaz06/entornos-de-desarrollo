@@ -62,7 +62,7 @@ public class Libro {
         this.isbn = isbn;
     }
 
-    @Override
+    //@Override
     public String toSrting() {
         String comprobarAutor = Autor != null ? Autor : "sin autor";
         return titulo + "(" + isbn + ")" + comprobarAutor;

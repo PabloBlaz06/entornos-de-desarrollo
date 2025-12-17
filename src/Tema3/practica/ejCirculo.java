@@ -5,6 +5,6 @@ public class ejCirculo {
 
         Circulo c1 = new Circulo(2.4);
         System.out.println(c1);
-        System.out.println("El circulo" + c1.perimetro());
+        System.out.println("El circulo " + c1.perimetro());
     }
 }
