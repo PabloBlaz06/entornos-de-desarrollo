@@ -50,5 +50,6 @@ public class ejercicio15 {
         System.out.println("La palabra con más vocales es: " + palabraMax);
         System.out.println("Y tiene " + maxVocales + " vocales");
 
+        sc.close();
     }
 }
