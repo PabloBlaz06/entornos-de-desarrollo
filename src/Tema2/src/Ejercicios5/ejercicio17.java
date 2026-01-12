@@ -21,10 +21,11 @@ public class ejercicio17 {
 
         String[] asignaturasA = asignaturas.split(":");
         String[] notasA = notas.split(":");
+
         for (int i = 0; i < asignaturasA.length; i++) {
             int nota = Integer.parseInt(notasA[i]);
 
-            if(nota >= 5){
+            if (nota >= 5) {
                 System.out.println(asignaturasA[i]);
             }
         }
