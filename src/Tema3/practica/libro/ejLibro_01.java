@@ -1,4 +1,4 @@
-package Tema3.practica;
+package Tema3.practica.libro;
 
 public class ejLibro_01 {
     public static void main(String[] args) {

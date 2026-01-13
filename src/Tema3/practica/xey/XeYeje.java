@@ -1,4 +1,4 @@
-package Tema3.practica;
+package Tema3.practica.xey;
 
 public class XeYeje {
     public static void main(String[] args) {

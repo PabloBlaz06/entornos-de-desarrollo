@@ -1,4 +1,4 @@
-package Tema3.practica;
+package Tema3.practica.circulo;
 
 public class Circulo {
 

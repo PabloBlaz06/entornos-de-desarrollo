@@ -1,4 +1,4 @@
-package Tema3.practica;
+package Tema3.practica.xey;
 
 /* Defina una clase punto que tendrá dos atributos, de tipo real, x e y,
  que representarán las coordenadas del punto dentro del plano.
