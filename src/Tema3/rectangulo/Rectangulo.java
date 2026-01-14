@@ -25,7 +25,9 @@ public class Rectangulo {
     }
 
     public void setLargo(int largo) {
-        this.largo = largo;
+        if ( largo > 0) {
+            this.largo = largo;
+        }
     }
 
     public int getAncho() {
@@ -33,7 +35,25 @@ public class Rectangulo {
     }
 
     public void setAncho(int ancho) {
-        this.ancho = ancho;
+        if (ancho > 0) {
+            this.ancho = ancho;
+        }
     }
-    
+
+    public int area(){
+        return 2 * (ancho + largo);
+    }
+
+    public String horizontalVertical (){
+        if (largo > ancho){
+            return "horizontal";
+        } else {
+            return "vertical";
+        }
+    }
+
+    public void mostrarDimensiones(){
+        System.out.println("Largo: " + largo);
+        System.out.println("Ancho: " + ancho);
+    }
 }
