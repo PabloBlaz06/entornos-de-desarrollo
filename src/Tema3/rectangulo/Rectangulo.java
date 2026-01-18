@@ -41,6 +41,10 @@ public class Rectangulo {
     }
 
     public int area(){
+        return (ancho * largo);
+    }
+
+    public int perimetro() {
         return 2 * (ancho + largo);
     }
 
@@ -56,4 +60,14 @@ public class Rectangulo {
         System.out.println("Largo: " + largo);
         System.out.println("Ancho: " + ancho);
     }
+
+    public void rectangulo() {
+        for (int i = 0; i < ancho; i++) {
+            for (int j = 0; j < largo; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
 }
