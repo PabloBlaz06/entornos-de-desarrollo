@@ -30,7 +30,7 @@ public class persona {
         generaDNI();
     }
 
-    public int calcularIMC(){
+    public int calcularIMC() {
         double imc = peso / (altura * altura);
 
         if (imc < 20) {
@@ -42,8 +42,8 @@ public class persona {
         }
     }
 
-    public boolean esMayorDeEdad(){
-        if (edad >= 18){
+    public boolean esMayorDeEdad() {
+        if (edad >= 18) {
             return true;
         } else {
             return false;
@@ -51,18 +51,18 @@ public class persona {
     }
 
     private char comprobarSexo(char sexo) {
-        if (sexo != 'M' && sexo != 'H') {
+        if (sexo != 'M' || sexo != 'H') {
             return 'H';
         } else {
             return sexo;
         }
     }
 
-    public String toString(){
+    public String toString() {
         return nombre + edad + dni + sexo + peso + altura;
     }
 
-    public void generaDNI(){
+    public void generaDNI() {
         int numeroDNI = (int) (Math.random() * 100000000);
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         char letra = letras.charAt(numeroDNI % 23);
