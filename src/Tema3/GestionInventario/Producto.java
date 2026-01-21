@@ -19,4 +19,7 @@ public class Producto {
         }
     }
 
+    public void mostrarInfo() {
+        System.out.println(" %");
+    }
 }

@@ -29,20 +29,23 @@ public class Robot {
     }
 
     public void recibirDano(double cantidad) {
-        double danoReal  = cantidad - blindaje;
+        double danoReal = cantidad - blindaje;
 
-        if (danoReal <= 0 ){
+        if (danoReal <= 0) {
             System.out.println("No ha hecho daño");
         } else {
-             vida = vida - danoReal;
-            if (vida <= 0){
+            vida = vida - danoReal;
+            if (vida <= 0) {
                 vida = 0;
             }
         }
     }
 
-    public void atacar( Robot enemigo){
-        if ()
+    public void atacar(Robot enemigo) {
+        if (vida == 0) {
+
+             
+        }
 
 
     }
