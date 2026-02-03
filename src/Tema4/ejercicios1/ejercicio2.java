@@ -1,5 +1,7 @@
 package Tema4.ejercicios1;
 
+/*Crea un programa que pida al usuario su fecha de nacimiento (día y mes)
+y calcule cuántos días faltan para su próximo cumpleaños desde hoy (02/04/2025)*/
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
