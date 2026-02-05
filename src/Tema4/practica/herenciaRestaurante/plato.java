@@ -12,6 +12,5 @@ public class plato {
     @Override
     public String toString() {
 
-
     }
 }
