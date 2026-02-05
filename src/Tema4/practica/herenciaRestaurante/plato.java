@@ -8,4 +8,10 @@ public class plato {
         this.nombre = nombre;
         this.precio = precio;
     }
+
+    @Override
+    public String toString() {
+
+
+    }
 }
