@@ -6,14 +6,11 @@ public class platoPostres extends plato {
 
     public platoPostres(String nombre, double precio, boolean conAzucar) {
         super(nombre, precio);
-        this.conAzucar = true;
+        this.conAzucar = conAzucar;
     }
 
-    public boolean isConAzucar() {
+    public static boolean isConAzucar() {
         return conAzucar;
     }
 
-    public void setConAzucar(boolean conAzucar) {
-        this.conAzucar = conAzucar;
-    }
 }

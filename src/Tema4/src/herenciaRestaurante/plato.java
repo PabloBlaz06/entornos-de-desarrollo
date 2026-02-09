@@ -4,16 +4,6 @@ public class plato {
     String nombre;
     double precio;
 
-    public plato(String nombre, double precio) {
-        this.nombre = nombre;
-        this.precio = precio;
-    }
-
-    @Override
-    public String toString() {
-        return "Primero: " + nombre + " - " + precio + "€" ;
-    }
-
     public double getPrecio() {
         return precio;
     }
@@ -21,4 +11,15 @@ public class plato {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public plato(String nombre, double precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return "Primero: " + nombre + " - " + precio + "€";
+    }
+
 }
