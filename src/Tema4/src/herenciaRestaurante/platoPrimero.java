@@ -9,4 +9,5 @@ public class platoPrimero extends plato {
         this.compartir = false;
     }
 
+
 }
