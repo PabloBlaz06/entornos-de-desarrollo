@@ -38,7 +38,7 @@ public class comanda {
     }
 
     public boolean hayDiabeticos() {
-        if (platoPostres.conAzucar()) {
+        if (platoPostres.isConAzucar() == true) {
             return false;
         } else {
             return true;
