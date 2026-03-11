@@ -8,5 +8,22 @@ public class Cliente {
     private String email;
     private int codCliente;
 
+    public Cliente(String nombre, String apellidos, String direccion, String email, int codCliente) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.direccion = direccion;
+        this.email = email;
+        this.codCliente = codCliente;
+    }
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", email='" + email + '\'' +
+                ", codCliente=" + codCliente +
+                '}';
+    }
 }
