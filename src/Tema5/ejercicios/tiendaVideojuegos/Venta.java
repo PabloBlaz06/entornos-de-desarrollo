@@ -6,10 +6,10 @@ import java.util.List;
 public class Venta {
 
     private Cliente cliente;
-    private List<VideoJuego> articulos;
+    private List<Videojuego> articulos;
     private LocalDate fechaVenta;
 
-    public Venta(Cliente cliente, List<VideoJuego> articulos) {
+    public Venta(Cliente cliente, List<Videojuego> articulos) {
         this.cliente = cliente;
         this.articulos = articulos;
         this.fechaVenta = LocalDate.now();
@@ -18,8 +18,8 @@ public class Venta {
     // Getters y Setters
     public Cliente getCliente() { return cliente; }
     public void setCliente(Cliente cliente) { this.cliente = cliente; }
-    public List<VideoJuego> getArticulos() { return articulos; }
-    public void setArticulos(List<VideoJuego> articulos) { this.articulos = articulos; }
+    public List<Videojuego> getArticulos() { return articulos; }
+    public void setArticulos(List<Videojuego> articulos) { this.articulos = articulos; }
     public LocalDate getFechaVenta() { return fechaVenta; }
     public void setFechaVenta(LocalDate fechaVenta) { this.fechaVenta = fechaVenta; }
 

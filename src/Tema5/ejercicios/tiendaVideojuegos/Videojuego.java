@@ -11,13 +11,13 @@ public class Videojuego {
     private int stock;
     private UUID codigo;
 
-    public Videojuego(String titulo, String plataforma, String genero, double precio, int stock, UUID codigo) {
+    public Videojuego(String titulo, String plataforma, String genero, double precio, int stock) {
         this.titulo = titulo;
         this.plataforma = plataforma;
         this.genero = genero;
         this.precio = precio;
         this.stock = stock;
-        this.codigo = UUID.randomUUID();
+        codigo = UUID.randomUUID();
     }
 
     public String getTitulo() {
