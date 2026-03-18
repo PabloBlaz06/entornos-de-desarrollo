@@ -1,5 +1,6 @@
 package Tema5.ejercicios.ListVideojuego;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -261,6 +262,8 @@ public class Tienda {
         }
         System.out.println("Total de ventas: " + ventas.size());
     }
+
+
 
 
 }

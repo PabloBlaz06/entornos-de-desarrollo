@@ -7,19 +7,19 @@ import java.util.List;
 
 public class Venta {
 
-    private Cliente cliente;
+    private Clientes clientes;
     private List<VideoJuegos> articulos;
     private LocalDate fechaVenta;
 
-    public Venta(Clientes cliente, List<VideoJuegos> articulos) {
-        this.cliente = cliente;
+    public Venta(Clientes clientes, List<VideoJuegos> articulos) {
+        this.clientes = clientes;
         this.articulos = articulos;
         this.fechaVenta = LocalDate.now();
     }
 
     // Getters y Setters
-    public Cliente getCliente() { return cliente; }
-    public void setCliente(Cliente cliente) { this.cliente = cliente; }
+    public Clientes getClientes() { return clientes; }
+    public void setClientes(Clientes clientes) { this.clientes = clientes; }
     public List<VideoJuegos> getArticulos() { return articulos; }
     public void setArticulos(List<VideoJuegos> articulos) { this.articulos = articulos; }
     public LocalDate getFechaVenta() { return fechaVenta; }
@@ -27,7 +27,7 @@ public class Venta {
 
     @Override
     public String toString() {
-        return "Venta{cliente=" + cliente.getNombre() + " " + cliente.getApellidos()
+        return "Venta{cliente=" + clientes.getNombre() + " " + clientes.getApellidos()
                 + ", articulos=" + articulos.size() + ", fecha=" + fechaVenta + "}";
     }
 }
