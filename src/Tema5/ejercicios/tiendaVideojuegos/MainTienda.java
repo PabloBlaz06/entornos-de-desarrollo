@@ -85,7 +85,7 @@ public class MainTienda {
                 case 5:     // Consukltar cliente
                     break;
                 case 6:     // Registrar Venta
-                    System.out.println("Introuduzca el código de cliente");
+               /*     System.out.println("Introuduzca el código de cliente");
                     codigo = sc.nextInt();
                     sc.nextLine();
                     cliente = buscarCliente(clientes, codigo);
@@ -124,7 +124,7 @@ public class MainTienda {
                     // Verificar stock
 
                     // Si hay stock hacer la venta
-
+*/
 
                     break;
 
