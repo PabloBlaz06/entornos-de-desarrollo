@@ -3,6 +3,10 @@ package Tema5.ejercicios.ejerciciosSet;
 import java.util.HashSet;
 import java.util.Set;
 
+/*El objetivo es entender que un Set no permite duplicados.
+Tarea: Crea un HashSet<String> llamado invitados.
+Acción: Añade los nombres: "Ana", "Luis", "Ana", "Marta", "Luis".
+Salida: Muestra el tamaño de la lista (size()) y comprueba que solo hay 3 nombres en total. */
 
 public class Ejercicio1 {
     public static void main(String[] args) {

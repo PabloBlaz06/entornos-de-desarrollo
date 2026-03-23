@@ -13,20 +13,5 @@ public class Ejercicio2 {
         inventario.put(113,"Pantalones");
         inventario.put(114,"Camisetas");
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Introduce un codigo que empiece por 11:");
-        Integer codigo= sc.nextInt();
-        sc.nextLine();
-
-        System.out.println("Introduce un nombre de ese producto:");
-        String nombre= sc.nextLine();
-
-        if(inventario.containsKey(codigo)){
-            System.out.println("¡Error! El código " + codigo + " ya está ocupado por: " + inventario.get(codigo));
-        } else{
-            inventario.put(codigo, nombre);
-            System.out.println("Producto añadido con éxito.");
-        }
     }
 }

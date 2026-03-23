@@ -12,8 +12,6 @@ public class Ejercicio3 {
         notas.put("Marcos" , 8.0);
         notas.put("Alejandro" , 7.2);
 
-       /* for( Double nota : notas.keySet()){
 
-        }*/
     }
 }
