@@ -20,10 +20,10 @@ public class Ejercicio5 {
         coches.add("B3");
         coches.add("D8");
         Scanner sc = new Scanner(System.in);
-        String matricula
+        String matricula;
 
-        if(coches.add() = false){
+       // if(coches.add() = false){
 
-        }
+
     }
 }
