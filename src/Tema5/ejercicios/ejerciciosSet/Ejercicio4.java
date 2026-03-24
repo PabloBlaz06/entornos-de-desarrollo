@@ -23,9 +23,12 @@ public class Ejercicio4 {
 
         Set<String> color = new HashSet<>(colores);
 
-        /*for(color:colores) {
-            System.out.println(color);
-        }*/
+        /*
+        Set<String> color = new HashSet<>();
+        for (String colorNew : colores) {
+            color.add(colorNew);
+        }
+        */
 
         System.out.println(color);
 
