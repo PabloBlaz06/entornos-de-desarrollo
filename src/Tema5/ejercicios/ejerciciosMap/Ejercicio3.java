@@ -2,7 +2,10 @@ package Tema5.ejercicios.ejerciciosMap;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/* Aprender a recorrer un mapa utilizando el conjunto de sus claves (keySet).
+Tarea: Crea un HashMap<String, Double> con los nombres de 4 alumnos y sus notas.
+Acción: Recorre el mapa utilizando un bucle for-each sobre notas.keySet().
+Salida: Imprime por cada vuelta: "El alumno [clave] tiene una nota de [valor]".*/
 public class Ejercicio3 {
     public static void main(String[] args) {
 

@@ -16,13 +16,19 @@ public class Ejercicio5 {
         Set<String> coches = new HashSet<>();
 
         coches.add("A1");
-        coches.add("A1");
         coches.add("B3");
         coches.add("D8");
-        Scanner sc = new Scanner(System.in);
-        String matricula;
 
-       // if(coches.add() = false){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce una matricula: ");
+
+        String matricula = sc.nextLine();
+
+       if(coches.contains(matricula)){
+           System.out.println("ERROR: La matrícula ya existe en el sistema");
+       } else {
+           coches.add(matricula);
+       }
 
 
     }
