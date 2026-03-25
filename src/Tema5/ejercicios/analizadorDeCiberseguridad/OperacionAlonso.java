@@ -1,4 +1,4 @@
-package Tema5.analizadorCiberseguridad;
+package Tema5.ejercicios.analizadorDeCiberseguridad;
 
 import java.util.*;
 
@@ -29,13 +29,17 @@ public class OperacionAlonso {
         // T1: Limpieza de Duplicados (Set de Mapas)
         // Al ser Mapas, el Set compara si tienen las mismas llaves y valores
         Set<Map<String, Object>> eventosUnicos = new HashSet<>(eventosBrutos);
+        System.out.println("Logs únicos detectados: " + eventosUnicos.size());
 
 
         // T2: Agrupación Anidada: Zona -> { TipoAcceso -> Conteo de Fallos }
         // Solo procesar si "autorizado" es false.
         Map<String, Map<String, Integer>> mapaFallos = new HashMap<>();
         // TODO: Rellenar mapaFallos. Ejemplo: "Servidores" -> {"Login": 2}
+        for (Map<String, Object> evento : eventosUnicos){
+            String zona = evento.get("zona").toString();
 
+        }
 
         // T3: Detección de Brechas de Seguridad (List)
         // Si el total de fallos de una zona en 'mapaFallos' > limite en 'limitesZona'
