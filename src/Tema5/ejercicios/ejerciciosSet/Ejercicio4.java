@@ -15,22 +15,14 @@ public class Ejercicio4 {
     public static void main(String[] args) {
 
         List<String> colores = new ArrayList<>();
-        colores.add("Rojo");
-        colores.add("Azul");
-        colores.add("Rojo");
-        colores.add("Verde");
-        colores.add("Azul");
+        colores.add("Red");
+        colores.add("Blue");
+        colores.add("Red");
+        colores.add("Green");
+        colores.add("Blue");
 
-        Set<String> color = new HashSet<>(colores);
+        Set<String> coloresSet = new HashSet<>(colores);
 
-        /*
-        Set<String> color = new HashSet<>();
-        for (String colorNew : colores) {
-            color.add(colorNew);
-        }
-        */
-
-        System.out.println(color);
-
+        System.out.println(coloresSet);
     }
 }

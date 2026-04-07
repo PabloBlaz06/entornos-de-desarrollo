@@ -1,33 +1,40 @@
 package Tema5.ejercicios.ListVideojuego;
 
-import Tema5.ejercicios.tiendaVideojuegos.Cliente;
-
 import java.time.LocalDate;
 import java.util.List;
 
 public class Venta {
-
     private Clientes clientes;
-    private List<VideoJuegos> articulos;
-    private LocalDate fechaVenta;
+    private List<VideoJuegos> videojuegos;
+    private LocalDate fecha;
 
-    public Venta(Clientes clientes, List<VideoJuegos> articulos) {
+    public Venta(Clientes clientes, List<VideoJuegos> videojuegos, LocalDate fecha) {
         this.clientes = clientes;
-        this.articulos = articulos;
-        this.fechaVenta = LocalDate.now();
+        this.videojuegos = videojuegos;
+        this.fecha = fecha;
     }
 
-    // Getters y Setters
-    public Clientes getClientes() { return clientes; }
-    public void setClientes(Clientes clientes) { this.clientes = clientes; }
-    public List<VideoJuegos> getArticulos() { return articulos; }
-    public void setArticulos(List<VideoJuegos> articulos) { this.articulos = articulos; }
-    public LocalDate getFechaVenta() { return fechaVenta; }
-    public void setFechaVenta(LocalDate fechaVenta) { this.fechaVenta = fechaVenta; }
+    public Clientes getClientes() {
+        return clientes;
+    }
 
-    @Override
-    public String toString() {
-        return "Venta{cliente=" + clientes.getNombre() + " " + clientes.getApellidos()
-                + ", articulos=" + articulos.size() + ", fecha=" + fechaVenta + "}";
+    public void setClientes(Clientes clientes) {
+        this.clientes = clientes;
+    }
+
+    public List<VideoJuegos> getVideojuegos() {
+        return videojuegos;
+    }
+
+    public void setVideojuegos(List<VideoJuegos> videojuegos) {
+        this.videojuegos = videojuegos;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
     }
 }

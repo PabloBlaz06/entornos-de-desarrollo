@@ -17,5 +17,18 @@ public class Ejercicio2 {
         inventario.put(113,"Pantalones");
         inventario.put(114,"Camisetas");
 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduce un codigo de un producto: ");
+        int codigo = sc.nextInt();
+
+        if(inventario.containsKey(codigo)){
+            System.out.println("Este codigo ya existe");
+        }else{
+            System.out.println("Introduce un producto: ");
+            String producto = sc.next();
+            inventario.put(codigo,producto);
+        }
+
     }
 }

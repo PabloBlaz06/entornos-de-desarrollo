@@ -3,14 +3,8 @@ package Tema5.ejercicios.videoclub;
 import java.util.Random;
 
 public class Cliente {
-    private static final Random random = new Random();
-
     private int numeroCarnet;
     private String nombre;
-
-    public Cliente(String nombre) {
-        this(random.nextInt(), nombre);
-    }
 
     public Cliente(int numeroCarnet, String nombre) {
         this.numeroCarnet = numeroCarnet;
@@ -21,16 +15,15 @@ public class Cliente {
         return numeroCarnet;
     }
 
+    public void setNumeroCarnet(int numeroCarnet) {
+        this.numeroCarnet = numeroCarnet;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "numeroCarnet=" + numeroCarnet +
-                ", nombre='" + nombre + '\'' +
-                '}';
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-
 }

@@ -12,23 +12,24 @@ Salida: Indica mediante un boolean si ese ID tiene acceso (si está contenido en
 public class Ejercicio2 {
     public static void main(String[] args) {
 
-        Set <Integer> IDs = new HashSet<>();
-        IDs.add(7);
-        IDs.add(4);
-        IDs.add(9);
-        IDs.add(1);
-        IDs.add(6);
+        Set<Integer> ids = new HashSet<>();
+        ids.add(6);
+        ids.add(9);
+        ids.add(2);
+        ids.add(5);
+        ids.add(4);
+
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("introcude un entero: ");
-        Integer num = sc.nextInt();
-        sc.nextLine();
+        System.out.println("Escribe un numero entero: ");
+        int numero = sc.nextInt();
 
-        boolean tieneAcceso = IDs.contains(num);
+        boolean contenido = false;
 
-        System.out.println(tieneAcceso);
-
+        if (ids.contains(numero)) {
+            contenido = true;
+        }
 
 
 

@@ -3,20 +3,20 @@ package Tema5.ejercicios.ListVideojuego;
 import java.util.UUID;
 
 public class VideoJuegos {
-    private String titulo;
-    private String plataforma;
-    private String genero;
-    private double precio;
-    private int stock;
-    private UUID codigo;
+   private String titulo;
+   private String plataforma;
+   private String genero;
+   private String precio;
+   private int stock;
+   private UUID codigo;
 
-    public VideoJuegos(String titulo, String plataforma, String genero, double precio, int stock) {
+    public VideoJuegos(String titulo, String plataforma, String genero, String precio, int stock, UUID codigo) {
         this.titulo = titulo;
         this.plataforma = plataforma;
         this.genero = genero;
         this.precio = precio;
         this.stock = stock;
-        codigo = UUID.randomUUID();
+        this.codigo = codigo;
     }
 
     public String getTitulo() {
@@ -43,11 +43,11 @@ public class VideoJuegos {
         this.genero = genero;
     }
 
-    public double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 
@@ -69,11 +69,11 @@ public class VideoJuegos {
 
     @Override
     public String toString() {
-        return "Videojuego{" +
+        return "VideoJuegos{" +
                 "titulo='" + titulo + '\'' +
                 ", plataforma='" + plataforma + '\'' +
                 ", genero='" + genero + '\'' +
-                ", precio=" + precio +
+                ", precio='" + precio + '\'' +
                 ", stock=" + stock +
                 ", codigo=" + codigo +
                 '}';

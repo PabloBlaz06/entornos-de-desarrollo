@@ -19,8 +19,8 @@ public class Ejercicio3 {
         rifa.add(3);
         rifa.add(22);
 
-        for (Integer rifas : rifa){
-            System.out.println(rifas);
+        for(Integer numero : rifa){
+            System.out.println(numero);
         }
 
     }

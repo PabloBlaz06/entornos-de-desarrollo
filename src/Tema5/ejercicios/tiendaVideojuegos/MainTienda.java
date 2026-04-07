@@ -1,10 +1,7 @@
 package Tema5.ejercicios.tiendaVideojuegos;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.UUID;
+import java.util.*;
 
 public class MainTienda {
     public static void main(String[] args) {
@@ -16,11 +13,85 @@ public class MainTienda {
         Cliente cliente;
         Boolean encontrado = false;
 
-        List<Videojuego> inventario = new ArrayList<>();
+   /*     List<Videojuego> inventario = new ArrayList<>();
         List<Cliente> clientes = new ArrayList<>();
-        List<Venta> ventas = new ArrayList<>();
+        List<Venta> ventas = new ArrayList<>();*/
+
+        List<Videojuego> inventario = List.of(
+                new Videojuego("Elden Ring", "PC", "RPG", 59.99, 10),
+                new Videojuego("Minecraft", "PC", "Sandbox", 29.99, 20),
+                new Videojuego("FIFA 26", "PS5", "Deportes", 69.99, 15),
+                new Videojuego("Zelda BOTW", "Switch", "Aventura", 49.99, 8),
+                new Videojuego("Cyberpunk 2077", "PC", "RPG", 39.99, 12),
+                new Videojuego("GTA V", "PC", "Acción", 19.99, 25),
+                new Videojuego("Hogwarts Legacy", "PS5", "Aventura", 59.99, 10),
+                new Videojuego("The Witcher 3", "PC", "RPG", 29.99, 18),
+                new Videojuego("Fortnite Pack", "PC", "Battle Royale", 14.99, 30),
+                new Videojuego("Call of Duty 2026", "PS5", "Shooter", 79.99, 7)
+        );
+        List<Cliente> clientes = List.of(
+                new Cliente("Ana", "López", "C/ Sol 12", "ana@gmail.com", 1),
+                new Cliente("Carlos", "Pérez", "Av. Galicia 33", "carlos@gmail.com", 2),
+                new Cliente("Lucía", "Fernández", "C/ Real 8", "lucia@gmail.com", 3),
+                new Cliente("Miguel", "Torres", "Rúa Nova 21", "miguel@gmail.com", 4),
+                new Cliente("Sara", "Gómez", "C/ Louriña 5", "sara@gmail.com", 5)
+        );
+        List<Venta> ventas = List.of(
+                new Venta(clientes.get(0), List.of(inventario.get(0))),
+                new Venta(clientes.get(1), List.of(inventario.get(1))),
+                new Venta(clientes.get(2), List.of(inventario.get(2))),
+                new Venta(clientes.get(3), List.of(inventario.get(3))),
+
+                new Venta(clientes.get(4), List.of(inventario.get(4))),
+                new Venta(clientes.get(0), List.of(inventario.get(5))),
+                new Venta(clientes.get(1), List.of(inventario.get(6))),
+                new Venta(clientes.get(2), List.of(inventario.get(7))),
+
+                new Venta(clientes.get(3), List.of(inventario.get(8))),
+                new Venta(clientes.get(4), List.of(inventario.get(9))),
+                new Venta(clientes.get(0), List.of(inventario.get(0))),
+                new Venta(clientes.get(1), List.of(inventario.get(1))),
+
+                new Venta(clientes.get(2), List.of(inventario.get(2))),
+                new Venta(clientes.get(3), List.of(inventario.get(3))),
+                new Venta(clientes.get(4), List.of(inventario.get(4))),
+                new Venta(clientes.get(0), List.of(inventario.get(5))),
+
+                new Venta(clientes.get(1), List.of(inventario.get(6))),
+                new Venta(clientes.get(2), List.of(inventario.get(7))),
+                new Venta(clientes.get(3), List.of(inventario.get(8))),
+                new Venta(clientes.get(4), List.of(inventario.get(9)))
+        );
+
+// =========================
+// 4. FECHAS (5 días de febrero 2026)
+// =========================
+        List<LocalDate> fechas = List.of(
+                LocalDate.of(2026, 2, 1),
+                LocalDate.of(2026, 2, 3),
+                LocalDate.of(2026, 2, 5),
+                LocalDate.of(2026, 2, 10),
+                LocalDate.of(2026, 2, 12)
+        );
+
+// =========================
+// 5. ASIGNAR FECHAS A LAS 20 VENTAS
+// =========================
+        for (int i = 0; i < ventas.size(); i++) {
+            ventas.get(i).setFechaVenta(fechas.get(i / 4)); // 4 ventas por fecha
+        }
 
         do {
+            /*
+            \n
+            \t Tabulación
+            \"
+            \'
+            \\
+            \r Retorno de carro
+            \b Backspace
+            \f Salto de página
+             */
             System.out.println("\n=== TIENDA DE VIDEOJUEGOS ===");
             System.out.println("1. Crear Videojuego");
             System.out.println("2. Mostrar inventario");
@@ -182,14 +253,14 @@ public class MainTienda {
                     if (ventas.isEmpty()) {
                         System.out.println("No hay ventas registradas");
                     }else{
-                        System.out.println("/n**** Estadísticas ****");
-                        System.out.println("/n1 Acumulado por plataforma");
+                        System.out.println("\n* Estadísticas ****");
+                        System.out.println("\n1 Acumulado por plataforma");
                         acumuladoPorPlataforma(ventas);
-                        System.out.println("/n2 Acumulado por género");
+                        System.out.println("\n2 Acumulado por género");
                         acumuladoPorGenero(ventas);
-                        System.out.println("/n3 Título más vendido");
+                        System.out.println("\n3 Título más vendido");
                         tituloMasVendido(ventas);
-                        System.out.println("/n1 Mejor día de ventas");
+                        System.out.println("\n4 Mejor día de ventas");
                         mejorDiaVentas(ventas);
                     }
                     break;
@@ -262,7 +333,7 @@ public class MainTienda {
             for (Videojuego v : venta.getArticulos()){
                 int indice = generos.indexOf(v.getGenero());
                 if (indice == -1){
-                    generos.add(v.getPlataforma());
+                    generos.add(v.getGenero());
                     totales.add(v.getPrecio());
                 }else{
                     totales.set(indice, totales.get(indice) + v.getPrecio());
@@ -302,33 +373,26 @@ public class MainTienda {
     }
 
     public static void mejorDiaVentas(List<Venta> ventas){
-        List<LocalDate> fechas = new ArrayList<>();
-        List<Double> totales = new ArrayList<>();
-        double totalVenta;
-/*
+        Map <LocalDate, Double> mapaVentasDia  = new HashMap<>();
+        LocalDate mejorDiaVentas = null;
+        double totalVenta, ventaAcumulada, maximo  = 0;
+
         for (Venta venta : ventas) {
             totalVenta = 0.0;
             for (Videojuego v : venta.getArticulos()){
                 totalVenta += v.getPrecio();
             }
-            int indice = fechas.indexOf(venta.getFechaVenta());
-            if (indice == -1){
-                fechas.add(venta.getTitulo());
-                totales.add(totalVenta);
-            }else{
-                totales.set(indice, totales.get(indice) + totalVenta);
-            }
+            ventaAcumulada = mapaVentasDia.getOrDefault(venta.getFechaVenta(), 0.0) + totalVenta;
+            mapaVentasDia.put(venta.getFechaVenta(),ventaAcumulada);
         }
 
-        int max = 0;
-        String tituloMasVendido = null;
-        for(int i = 0; i < titulos.size(); i++){
-            if(cantidades.get(i) > max){
-                max = cantidades.get(i);
-                tituloMasVendido = titulos.get(i);
+        for(LocalDate fecha : mapaVentasDia.keySet()){
+            if(mapaVentasDia.get(fecha) > maximo){
+                maximo = mapaVentasDia.get(fecha);
+                mejorDiaVentas = fecha;
             }
         }
-        System.out.println("El más vendido es: " + tituloMasVendido);*/
+        System.out.println("El mejor día de ventas es: " + mejorDiaVentas);
     }
 
 

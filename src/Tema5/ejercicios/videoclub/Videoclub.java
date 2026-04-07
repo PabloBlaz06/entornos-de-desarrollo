@@ -1,38 +1,47 @@
 package Tema5.ejercicios.videoclub;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Videoclub {
-    List<Cliente> clientes;
-    List<Pelicula> peliculas;
-    List<Prestamo> prestamos;
+    List<Cliente> clientes = new ArrayList<>();
+    List<Pelicula> peliculas = new ArrayList<>();
+    List<Prestamo> prestamos = new ArrayList<>();
 
     public Videoclub() {
-        clientes = new ArrayList<>();
-        peliculas = new ArrayList<>();
-        prestamos = new ArrayList<>();
+        this.clientes = new ArrayList<>();
+        this.peliculas = new ArrayList<>();
+        this.prestamos = new ArrayList<>();
     }
 
-    public void añadirCliente(Cliente cliente) {
-        clientes.add(cliente);
+    public void anadirCliente(Cliente cliente) {
+            clientes.add(cliente);
     }
 
-    public void añadirPelicula(Pelicula pelicula) {
+    public void anadirPelicula(Pelicula pelicula) {
         peliculas.add(pelicula);
     }
 
-    public void añadirPrestamo(Prestamo prestamo) {
+    public void anadirPrestamo(Prestamo prestamo) {
         prestamos.add(prestamo);
     }
 
-    public Pelicula buscarPelicula(int codigo) {
-        // TODO
+    public Pelicula buscarPelicula (int codigo){
+        for (Pelicula peli : peliculas) {
+            if (peli.getCodigo() == codigo) {
+                return peli;
+            }
+        }
         return null;
     }
 
-    public Cliente buscarCliente(int numeroCarnet) {
-        // TODO
+    public Cliente buscarCliente (int numeroCarnet){
+        for (Cliente cli : clientes) {
+            if(cli.getNumeroCarnet() == numeroCarnet) {
+                return cli;
+            }
+        }
         return null;
     }
 
@@ -41,22 +50,32 @@ public class Videoclub {
     }
 
     public List<Prestamo> getPrestamos(int numeroCarnet) {
-        // TODO
-        return null;
+        List<Prestamo> filtrados = new ArrayList<>();
+        for (Prestamo prest : prestamos){
+            if(prest.getCliente().getNumeroCarnet() == numeroCarnet) {
+                filtrados.add(prest);
+            }
+        }
+        return filtrados;
     }
 
-    public boolean devolucion(int codigoPelicula, int numeroCarnet) {
-        // TODO
-        // Cambia el préstamo para que la película esté devuelta
+    public boolean devolucion (int codigoPelicula, int numeroCarnet) {
+        for (Prestamo pres : prestamos) {
+            if (pres.getPelicula().getCodigo() == codigoPelicula && pres.getCliente().getNumeroCarnet() == numeroCarnet) {
+                prestamos.remove(pres);
+                return true;
+            }
+        }
         return false;
     }
 
-    public List<Cliente> prestamosMorosos() {
-        List<Cliente> clientesMorosos = new ArrayList<>();
-        // TODO
-        // Recorre toda la lista y devuelve los clientes con préstamos no devueltos
-        // y que haya pasado la fecha de devolución (2 días sobre fecha préstamo)
-        return clientesMorosos;
+    public List <Prestamo> prestamosMorosos(){
+        List<Prestamo> moroso = new ArrayList<>();
+        for (Prestamo prest : prestamos){
+            if (prest.getFechaDevolucion().isBefore(LocalDate.now())){
+                moroso.add(prest);
+            }
+        }
+        return moroso;
     }
-
 }

@@ -11,8 +11,7 @@ Salida: Muestra el tamaño de la lista (size()) y comprueba que solo hay 3 nombr
 public class Ejercicio1 {
     public static void main(String[] args) {
 
-        Set<String> invitados = new HashSet<>();
-
+        Set <String> invitados = new HashSet<>();
         invitados.add("Ana");
         invitados.add("Luis");
         invitados.add("Ana");
@@ -20,6 +19,5 @@ public class Ejercicio1 {
         invitados.add("Luis");
 
         System.out.println(invitados.size());
-        System.out.println(invitados);
     }
 }

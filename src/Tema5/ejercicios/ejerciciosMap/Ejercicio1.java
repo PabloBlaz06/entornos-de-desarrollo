@@ -1,5 +1,6 @@
 package Tema5.ejercicios.ejerciciosMap;
 
+import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -22,6 +23,16 @@ public class Ejercicio1 {
         diccionario.put("Grapes","Uvas");
         diccionario.put("Pear","Pera");
 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduce una palabra en ingles por teclado: ");
+        String palabra = sc.nextLine();
+
+        if(diccionario.containsKey(palabra)){
+            System.out.println(diccionario.get(palabra));
+        }else{
+            System.out.println("Palabra no encontrada");
+        }
 
     }
 }

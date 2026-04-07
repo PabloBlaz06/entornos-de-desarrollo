@@ -15,6 +15,9 @@ public class Ejercicio3 {
         notas.put("Marcos" , 8.0);
         notas.put("Alejandro" , 7.2);
 
+        for (String nota : notas.keySet()) {
+            System.out.println("El alumno " + nota + " es: " + notas.get(nota));
+        }
 
     }
 }

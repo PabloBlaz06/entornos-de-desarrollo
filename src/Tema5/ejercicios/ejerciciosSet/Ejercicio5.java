@@ -13,23 +13,17 @@ import java.util.Set;
 public class Ejercicio5 {
     public static void main(String[] args) {
 
-        Set<String> coches = new HashSet<>();
-
-        coches.add("A1");
-        coches.add("B3");
-        coches.add("D8");
+        Set<String> matriculas = new HashSet<>();
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce una matricula: ");
+        System.out.println("Ingrese la matricula: ");
+        String matricula = sc.next();
 
-        String matricula = sc.nextLine();
-
-       if(coches.contains(matricula)){
-           System.out.println("ERROR: La matrícula ya existe en el sistema");
-       } else {
-           coches.add(matricula);
-       }
-
+        if(matriculas.contains(matricula)){
+            System.out.println("ERROR: La matrícula ya existe en el sistema");
+        }else {
+            matriculas.add(matricula);
+        }
 
     }
 }
