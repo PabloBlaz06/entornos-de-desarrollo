@@ -69,9 +69,7 @@ public class Alquileres {
         );
     }
 
-    public static Set<String> getCodigosCoches(
-        Map<String, Map<String, Integer>> datos
-    ) {
+    public static Set<String> getCodigosCoches(Map<String, Map<String, Integer>> datos) {
         Set<String> codigos = datos.keySet();
         return codigos;
     }
