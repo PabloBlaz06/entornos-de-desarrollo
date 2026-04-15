@@ -34,6 +34,7 @@ public class Ej1 {
 
         // Listar el contenido de la carpeta
         System.out.println("Contenido de MiDirectorioDAM");
+
         File[] archivos = carpeta.listFiles();
         for(File archivo : archivos){
             System.out.println(archivo.getName() + " - " +  archivo.length() + " bytes");
