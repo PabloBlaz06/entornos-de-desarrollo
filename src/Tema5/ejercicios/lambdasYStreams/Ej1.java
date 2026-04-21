@@ -10,7 +10,8 @@ public class Ej1 {
 
         notas.stream()
                 .filter(nota -> nota >= 5)
-                .forEach(nota -> System.out.println(nota));
+                .forEach(System.out::println);
+        //otra forma de ponerlo: .forEach(nota -> System.out.println(nota));
 
     }
 }
