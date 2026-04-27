@@ -5,7 +5,6 @@ import java.io.File;
 
 public class Ej1 {
     public static void main(String[] args) {
-
         // Crear carpeta
         File carpe = new File("MiDirectorioDAM");
 
@@ -21,27 +20,27 @@ public class Ej1 {
         File datos = new File(carpe,"datos.txt");
         File config = new File(carpe, "config.ini");
 
-       try{
-           if(!datos.createNewFile()){
+        try{
+            if(!datos.createNewFile()){
 
-               System.out.println("datos.txt creado ");
+                System.out.println("datos.txt creado ");
 
-           }
-           if(!config.createNewFile()){
+            }
+            if(!config.createNewFile()){
 
-               System.out.println("config.ini creado: " + config.getName());
+                System.out.println("config.ini creado: " + config.getName());
 
-           }
-       } catch (IOException e) {
-           System.out.println("Error: " + e.getMessage());
-       }
+            }
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
         // Listar el contenido de la carpeta
 
         System.out.println("Contenido de MiDirectorioDAM");
 
         File[] archivos = carpe.listFiles();
-       for(File archivo : archivos){
-           System.out.println(archivo.getName() + " - " + archivo.length());
-       }
+        for(File archivo : archivos){
+            System.out.println(archivo.getName() + " - " + archivo.length());
+        }
     }
 }

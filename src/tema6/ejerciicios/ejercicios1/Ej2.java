@@ -1,9 +1,6 @@
 package tema6.ejerciicios.ejercicios1;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.util.Scanner;
 
 public class Ej2 {
@@ -14,7 +11,7 @@ public class Ej2 {
 
         System.out.println("Escribe frases para el diario(fin para terminar): ");
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("diario.txt", true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("diario.txt",true))) {
 
             while (!frase.equalsIgnoreCase("fin")) {
 
