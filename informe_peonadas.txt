@@ -1,0 +1,6 @@
+**** INFORME PEONADAS***
+
+Total de peonadas registradas 1560
+Total de personas distintas 827
+Persona que más aparece Elisa Vega
+Mes que má aparece 15

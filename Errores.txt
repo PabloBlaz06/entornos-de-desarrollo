@@ -1,0 +1,3 @@
+Error en el formato de la fecha en la linea: 12
+Error porque las horas no es entero positivo en la linea: 19
+Error en el numero de campos en la linea: 20
